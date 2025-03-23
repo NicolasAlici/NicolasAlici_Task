@@ -26,6 +26,15 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         _rb.linearVelocity = _moveDir * moveSpeed;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            inventory.Save();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            inventory.Load();
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
