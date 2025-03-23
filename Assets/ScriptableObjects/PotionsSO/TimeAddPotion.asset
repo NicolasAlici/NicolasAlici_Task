@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf1a808ee629794c80c97a9fcdcd777, type: 3}
   m_Name: TimeAddPotion
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 6051235848702201596, guid: 40038bb1e88e7764f839f9ef1bbcd033, type: 3}
+  Id: 2
+  UIdisplay: {fileID: 2086349454434316625, guid: f7b9a39a96848e14fb526464f9652bcc, type: 3}
   itemType: 2
   description: Add some time to this challenge and be a little bit more relaxed,
     but don't relax too much!

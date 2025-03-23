@@ -841,6 +841,10 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 11400000, guid: 54181567346c4764c8c4fe059767f75c, type: 2}
+    - target: {fileID: 3428109041212384753, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
+      propertyPath: displayInventory
+      value: 
+      objectReference: {fileID: 831216415797740335}
     - target: {fileID: 4017866795024809897, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -885,11 +889,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7512039064228418653, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
+      propertyPath: X_START
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512039064228418653, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
+      propertyPath: inventoryPrefab
+      value: 
+      objectReference: {fileID: 4613907461638848220, guid: 3d740d9fa2c2e69468a79fe6496b8224, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
+--- !u!114 &831216415797740335 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7512039064228418653, guid: 88f2a91c9512b0f409e3130822672a1e, type: 3}
+  m_PrefabInstance: {fileID: 831216415797740333}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86460aeefb6d1c74184b8578f717e2c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2294610604790313187
 PrefabInstance:
   m_ObjectHideFlags: 0

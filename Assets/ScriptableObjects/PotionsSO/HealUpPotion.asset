@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dea7389608bcf04fba58c455f7a329f, type: 3}
   m_Name: HealUpPotion
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3893983993195420764, guid: f3d406e20aff3a849a72b9ce32a4aede, type: 3}
+  Id: 0
+  UIdisplay: {fileID: 7916782054679102529, guid: 476481efb09486a478f528c22b5f2213, type: 3}
   itemType: 1
   description: Restore the health you are missing using this object!
   restoreHealthValue: 20

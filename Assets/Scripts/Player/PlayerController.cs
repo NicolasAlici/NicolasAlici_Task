@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     public InventoryObject inventory;
+    public DisplayInventory displayInventory;
     
     //Serialized Vars
     [SerializeField] private int moveSpeed;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rb;
     private Vector2 _moveDir;
     private float _currentHealth;
+    
 
     private void Start()
     {
@@ -39,17 +41,18 @@ public class PlayerController : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var item = collision.GetComponent<Item>();
+        var item = collision.GetComponent<GroundItem>();
         if (item)
         {
-            inventory.AddItem(item.item, 1);
+            //displayInventory.UpdateSlots();
+            inventory.AddItem(new Item(item.item), 1);
             Destroy(collision.gameObject);
         }
     }
 
     private void OnApplicationQuit()
     {
-        inventory.container.Clear();
+        inventory.Container.Items = new InventorySlot[3];
     }
 
     public void Move(InputAction.CallbackContext context)

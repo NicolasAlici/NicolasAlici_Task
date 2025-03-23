@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ddafe77c59070d4bbd2553fa1ef4788, type: 3}
   m_Name: VenomousPotion
   m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 3416156055223507987, guid: 70c2a68506447e844bd94e46829a4b59, type: 3}
+  Id: 1
+  UIdisplay: {fileID: 5357962754537125666, guid: 2d8997bab145a3649a6f5f454f14102b, type: 3}
   itemType: 0
   description: "This Venomous potion makes you lose health! \nThrow it away as fast
     as you see it."
