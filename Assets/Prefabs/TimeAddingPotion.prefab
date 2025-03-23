@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2766822179810251136}
   - component: {fileID: 5564531423288775686}
   - component: {fileID: -84947966537915232}
+  - component: {fileID: 859416916018437689}
   m_Layer: 0
   m_Name: TimeAddingPotion
   m_TagString: Item
@@ -77,9 +78,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 2086349454434316625, guid: f7b9a39a96848e14fb526464f9652bcc, type: 3}
-  m_Color: {r: 0, g: 0.7471185, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,3 +149,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 6354520cde27a7c45a2a26dc50f27d51, type: 2}
+--- !u!114 &859416916018437689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777315770554339182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266bc93c6f87e9846856380303dea5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Add some time to this challenge and be a little bit more relaxed, but
+    don't relax too much!

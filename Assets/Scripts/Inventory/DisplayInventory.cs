@@ -12,14 +12,14 @@ public class DisplayInventory : MonoBehaviour
     
     public InventoryObject inventory; //Inventory to display
     public GameObject inventoryPrefab;
+    public List<HealthPotion> healthPotion;
 
     public int X_SPACE_BETWEEN_SLOTS;
     public int NUMBER_OF_COLUMN;
     public int Y_SPACE_BETWEEN_SLOTS;
     public int X_START;
     public int Y_START;
-
-
+    
     Dictionary<GameObject, InventorySlot> itemsDisplayed = new Dictionary<GameObject, InventorySlot>();
 
     private void Start()
@@ -45,7 +45,8 @@ public class DisplayInventory : MonoBehaviour
             AddEvent(obj, EventTriggerType.BeginDrag, delegate { OnDragStart(obj); });
             AddEvent(obj, EventTriggerType.EndDrag, delegate { OnDragEnd(obj); });
             AddEvent(obj, EventTriggerType.Drag, delegate { OnDrag(obj); });
-
+            AddEvent(obj, EventTriggerType.PointerClick, delegate { OnClick(obj); });
+            
             itemsDisplayed.Add(obj, inventory.Container.Items[i]);
         }
     }
@@ -129,6 +130,24 @@ public class DisplayInventory : MonoBehaviour
         if (mouseItem.obj != null)
         {
             mouseItem.obj.GetComponent<RectTransform>().position = Input.mousePosition;
+        }
+    }
+
+    public void OnClick(GameObject obj)
+    {
+        mouseItem.hoverObj = obj;
+        if (itemsDisplayed.ContainsKey(obj))
+        {
+            foreach (HealthPotion potion in healthPotion)
+            {
+                if (potion != null)
+                {
+                    potion.Use();
+                    inventory.RemoveItem(itemsDisplayed[obj].item);
+                    break;
+                }
+            }
+            
         }
     }
 

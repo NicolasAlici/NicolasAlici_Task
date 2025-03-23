@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2766822179810251136}
   - component: {fileID: 5564531423288775686}
   - component: {fileID: -84947966537915232}
+  - component: {fileID: -4987882433302543924}
   m_Layer: 0
   m_Name: VenomousPotion
   m_TagString: Item
@@ -77,9 +78,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 5357962754537125666, guid: 2d8997bab145a3649a6f5f454f14102b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.013794422, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -148,3 +149,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 364a43ae1fc56054db9017ee2d443e9d, type: 2}
+--- !u!114 &-4987882433302543924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777315770554339182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266bc93c6f87e9846856380303dea5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: This Venomous potion makes you lose health!  Throw it away as fast as
+    you see it.

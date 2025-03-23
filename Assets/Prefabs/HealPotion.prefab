@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2539398354381562933}
   - component: {fileID: 2766822179810251136}
   - component: {fileID: 5564531423288775686}
-  - component: {fileID: -84947966537915232}
+  - component: {fileID: -6693765855841126533}
+  - component: {fileID: -6231512097844724848}
   m_Layer: 0
   m_Name: HealPotion
   m_TagString: Item
@@ -77,9 +78,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 4
   m_Sprite: {fileID: 7916782054679102529, guid: 476481efb09486a478f528c22b5f2213, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -135,7 +136,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.6476188, y: 1.841433}
   m_EdgeRadius: 0
---- !u!114 &-84947966537915232
+--- !u!114 &-6693765855841126533
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,7 +145,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 2777315770554339182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f11d69cfa287e44ba6cb3550232dd6d, type: 3}
+  m_Script: {fileID: 11500000, guid: 266bc93c6f87e9846856380303dea5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  message: Restore the health you are missing using this object!
+--- !u!114 &-6231512097844724848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777315770554339182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 345d76b1806960c4e8bd529dfe4bd7f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 3f8e3ff42cefc7440bb7031f12baf1ce, type: 2}
+  _healObject: {fileID: 11400000, guid: 3f8e3ff42cefc7440bb7031f12baf1ce, type: 2}

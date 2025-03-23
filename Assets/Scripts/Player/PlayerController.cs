@@ -7,36 +7,33 @@ public class PlayerController : MonoBehaviour
 {
     public InventoryObject inventory;
     public DisplayInventory displayInventory;
+    public Vector2 moveDir { get; private set; }
     
     //Serialized Vars
     [SerializeField] private int moveSpeed;
     [SerializeField] private float maxHealth;
     [SerializeField] private float minHealth;
     [SerializeField] private Image healthBar;
+    [SerializeField] private GameObject invPanel;
     //Private Vars
     private Rigidbody2D _rb;
-    private Vector2 _moveDir;
     private float _currentHealth;
+    private PlayerModel _playerModel;
     
 
     private void Start()
     {
         _rb =   GetComponent<Rigidbody2D>();
+        _playerModel = GetComponent<PlayerModel>();
+        
+        invPanel.SetActive(false);
         SetHealth();
     }
     
     private void Update()
     {
-        _rb.linearVelocity = _moveDir * moveSpeed;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            inventory.Save();
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            inventory.Load();
-        }
+        _rb.linearVelocity = moveDir * moveSpeed;
+        ShowHideInv();
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,7 +54,8 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        _moveDir = context.ReadValue<Vector2>();
+        _playerModel.MovementAnim(context);
+        moveDir = context.ReadValue<Vector2>();
     }
 
     private void SetHealth()
@@ -74,6 +72,14 @@ public class PlayerController : MonoBehaviour
         {
             _currentHealth = minHealth;
             //Win Event
+        }
+    }
+
+    private void ShowHideInv()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            invPanel.SetActive(!invPanel.activeSelf); 
         }
     }
 }
